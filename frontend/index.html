@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Claim Verifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Web Claim Verifier</h1>
+        <p>Verify web-based claims using GenLayer.</p>
+    </header>
+
+    <main>
+
+        <label for="claim">Claim</label>
+
+        <textarea
+            id="claim"
+            placeholder="Enter the claim you want to verify..."
+        ></textarea>
+
+        <label for="url">Source URL</label>
+
+        <input
+            id="url"
+            type="url"
+            placeholder="https://example.com"
+        >
+
+        <button id="verifyButton">
+            Verify Claim
+        </button>
+
+        <div id="status"></div>
+
+        <section id="result" class="hidden">
+
+            <h2>Verification Result</h2>
+
+            <div class="result-box">
+                <span class="label">Verdict</span>
+                <span id="verdict"></span>
+            </div>
+
+            <div class="evidence-box">
+                <span class="label">Evidence</span>
+                <p id="evidence"></p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
